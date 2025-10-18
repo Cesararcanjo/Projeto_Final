@@ -29,6 +29,21 @@
             transition: 0.5s;
 
         }
+        /* Estilos para o botão de mostrar/ocultar senha */
+        .password-container {
+            position: relative;
+        }
+        
+        .toggle-password {
+            position: absolute;
+            right: 10px;
+            top: 35px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #666;
+            font-size: 14px;
+        }
         
         h1 {
             color: #333;
@@ -135,9 +150,10 @@
         .footer a:hover {
             text-decoration: underline;
         }
-         @media (max-width: 768px) 
+         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
                 align-items: center;
         }
+    }
   
