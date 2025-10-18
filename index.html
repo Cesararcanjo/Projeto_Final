@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-
+<html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema de Gerenciamento de Tarefas - Login</title>
-    <link rel="stylesheet" href="login.css"> 
-
+    <link rel="stylesheet" href="css/login.css"> 
+    
 </head>
 <body>
     <div class="login-container">
@@ -20,7 +20,10 @@
             
             <div class="input-group">
                 <label for="password">Senha</label>
-                <input type="password" id="password" placeholder="Digite sua senha" required>
+                <div class="password-container">
+                    <input type="password" id="password" placeholder="Digite sua senha" required>
+                    <button type="button" class="toggle-password" onclick="togglePassword()">👁️</button>
+                </div>
             </div>
             
             <button type="submit" onclick="alert('Clique para entrar no sistema.')" class="btn-login">Entrar</button>
@@ -34,7 +37,22 @@
             © 2023 Projeto Acadêmico | <a href="#">Termos de Uso</a>
         </div>
     </div>
+    <script>
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const toggleButton = document.querySelector('.toggle-password');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleButton.textContent = 'Ocultar';
+            } else {
+                passwordInput.type = 'password';
+                toggleButton.textContent = 'Mostrar';
+            }
+        }
+    </script>
 
-    <script src="index.js"></script>
-
-</body></html>
+    <script src="js/index.js">       
+    </script>
+</body>
+</html>
