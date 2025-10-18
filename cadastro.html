@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gerenciamento de Tarefas - Cadastro</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Sistema de Gerenciamento de Tarefas</h1>
+        <h2>Crie sua conta</h2>
+        
+        <form id="cadastroForm">
+            <div class="input-group">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" placeholder="Digite seu nome" name="name" required>
+                <div class="error" id="nomeError">Por favor, insira um nome válido (mínimo 2 caracteres)</div>
+            </div>
+            
+            <div class="input-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="Digite seu E-mail" name="email" required>
+                <div class="error" id="emailError">Por favor, insira um e-mail válido</div>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" placeholder="Digite sua senha" name="password" required>
+                <div class="error" id="passwordError">A senha deve ter pelo menos 6 caracteres</div>
+            </div>
+            
+            <button type="submit" class="btn-login" id="criarBotao"><a href="dashboard.html"></a>Criar Perfil</button>
+                        
+            <div class="success-message" id="successMessage">
+                Perfil criado com sucesso!
+            </div>
+                       
+            <div class="register-link">
+                Já tem uma conta? <a href="index.html">Faça Login</a>
+            </div>
+            
+        </form>
+    </div>
+
+    <script src="js/cadastro.js"></script>      
+    
+</body>
+</html>
