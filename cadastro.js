@@ -8,17 +8,18 @@
             const passwordError = document.getElementById('passwordError');
             const successMessage = document.getElementById('successMessage');
             
-            // Função para validar o nome
             function validarNome() {
                 const nome = nomeInput.value.trim();
-                if (nome.length < 2) {
-                    nomeError.style.display = 'block';
-                    nomeInput.style.borderColor = '#e74c3c';
-                    return false;
-                } else {
-                    nomeError.style.display = 'none';
-                    nomeInput.style.borderColor = '#2ecc71';
-                    return true;
+                // Regex: pelo menos 2 palavras com letras, separadas por espaço
+                const regexNome = /^[a-zA-ZÀ-ÿ]+(?:\s+[a-zA-ZÀ-ÿ]+)+$/;
+                        if (!regexNome.test(nome) || nome.length < 5) {
+                nomeError.style.display = 'block';
+                nomeInput.style.borderColor = '#e74c3c';
+                        return false;
+                    } else {
+                nomeError.style.display = 'none';
+                nomeInput.style.borderColor = '#2ecc71';
+                        return true;
                 }
             }
             
@@ -94,6 +95,7 @@
         });
     }
 });
+
 
 
 
