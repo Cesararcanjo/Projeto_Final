@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Validação da senha
     function validarSenha(senha) {
-        return senha.length >= 6; // Mínimo de 6 caracteres
+        return senha.length >= 8; // Mínimo de 8 caracteres
     }
 
     // Função para mostrar mensagem de erro
@@ -132,4 +132,5 @@ document.addEventListener('DOMContentLoaded', function() {
             this.value = 'Digite seu e-mail';
         }
     });
+
 });
