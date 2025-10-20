@@ -10,7 +10,7 @@
             
             function validarNome() {
                 const nome = nomeInput.value.trim();
-                // Regex: pelo menos 2 palavras com letras, separadas por espaço
+                // Regex: pelo menos 5 palavras com letras, separadas por espaço
                 const regexNome = /^[a-zA-ZÀ-ÿ]+(?:\s+[a-zA-ZÀ-ÿ]+)+$/;
                         if (!regexNome.test(nome) || nome.length < 5) {
                 nomeError.style.display = 'block';
@@ -100,3 +100,4 @@
 
 
         });
+
