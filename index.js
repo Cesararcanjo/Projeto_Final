@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
             mostrarErro(passwordInput, 'Senha é obrigatória');
             formValido = false;
         } else if (!validarSenha(senha)) {
-            mostrarErro(passwordInput, 'A senha deve ter pelo menos 6 caracteres');
+            mostrarErro(passwordInput, 'A senha deve ter pelo menos 8 caracteres');
             formValido = false;
         } else {
             mostrarErro(passwordInput, '');
@@ -134,4 +134,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
+
 
