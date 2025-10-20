@@ -43,7 +43,7 @@
             function validarSenha() {
                 const senha = passwordInput.value;
                 
-                if (senha.length < 6) {
+                if (senha.length < 8) {
                     passwordError.style.display = 'block';
                     passwordInput.style.borderColor = '#e74c3c';
                     return false;
@@ -100,4 +100,5 @@
 
 
         });
+
 
