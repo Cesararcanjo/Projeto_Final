@@ -1,0 +1,48 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #e7f7c4;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  color: #353433;
+  line-height: 1.6;
+}
+
+/* Estilos globais para notificações */
+.notificacao {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.notificacao.sucesso {
+  background-color: #27ae60;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.notificacao.erro {
+  background-color: #e74c3c;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.erro-validacao {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+}
