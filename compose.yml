@@ -1,0 +1,14 @@
+services:
+  web:
+    image: papadopoli/vue-vite-dev:latest
+    working_dir: /workspace
+    volumes:
+      - .:/workspace:rw
+      - /workspace/node_modules
+    ports:
+      - "5173:5173"
+      - "24678:24678"
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - CHOKIDAR_INTERVAL=200
+    command: ["bash","-lc","[ -f node_modules/.bin/vite ] || (npm ci || npm install); npm run dev -- --host 0.0.0.0 --port 5173 --strictPort"]
